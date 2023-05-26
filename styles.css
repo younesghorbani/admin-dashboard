@@ -25,7 +25,7 @@ ul li {
 }
 
 .avatar {
-    width: 3.125rem;
+    width: 2.5rem;
     height: auto;
 }
 
@@ -36,16 +36,67 @@ ul li {
 
 .container header {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    gap: 1.25rem;
+    font-weight: bold;
+    padding: .9375rem 1.875rem;
 }
 
 header > * {
     display: flex;
     align-items: center;
+    column-gap: .9375rem;
 }
 
-header .buttons ul {
+header .search input {
+    width: 90%;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #e2e8f0;
+    color: #0284c7;
+    padding: .3125rem .625rem;
+    outline: none;
+    border: none;
+    border-radius: 1.8125rem;
+}
+
+.search input:focus {
+    border: 1px solid #0284c7;
+}
+
+header .profile {
+    justify-content: center;
+}
+
+.profile > * {
+    cursor: pointer;
+}
+
+header .user .avatar {
+    width: 3.75rem;
+}
+
+.user span {
+    font-size: 68.75%;
+}
+
+.user p {
+    font-size: 112.5%;
+    margin-top: 4px;
+}
+
+.buttons ul {
     display: flex;
+    column-gap: 1.5625rem;
+}
+
+.buttons ul li {
+    font-size: 81.25%;
+    background-color: #0284c7;
+    color: #fff;
+    padding: .5rem 1.5rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
 }
 
 .container .sidebar {
