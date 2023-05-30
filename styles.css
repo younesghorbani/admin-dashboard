@@ -89,7 +89,11 @@ header .user .avatar {
 
 .user p {
     font-size: 112.5%;
-    margin-top: 4px;
+    margin-top: .25rem;
+}
+
+header .buttons {
+    justify-content: center;
 }
 
 .buttons ul {
@@ -103,7 +107,12 @@ header .user .avatar {
     color: #fff;
     padding: .5rem 1.5rem;
     border-radius: 1.5rem;
+    transition: background-color .2s ease;
     cursor: pointer;
+}
+
+.buttons ul li:hover {
+    background-color: #0ea5e9;
 }
 
 .container .sidebar {
@@ -122,7 +131,7 @@ header .user .avatar {
 }
 
 .sidebar .brand {
-    width: min-content;
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: .625rem;
@@ -147,12 +156,133 @@ header .user .avatar {
 }
 
 .sidebar nav a {
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: .9375rem;
 }
 
 .container main {
+    background-color: #e2e8f0;
+    padding: 1.875rem .9375rem;
+    box-shadow: 0 20px 10px -20px rgba(0, 0, 0, .30) inset;
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 3fr 1fr;
+}
+
+.projects .title,
+.announcements .title,
+.trends .title {
+    font-weight: bold;
+    margin-bottom: .625rem;
+}
+
+.projects .cards {
+    height: 95.5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.cards .card {
+    background-color: #fff;
+    border-left: 6px solid #ffa500;
+    border-radius: 6px;
+    padding: 1.5625rem 1.25rem;
+    box-shadow: 2.4px 2.4px 3.2px rgba(0, 0, 0, .15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .card-title {
+    display: inline-block;
+    font-size: .9375rem;
+    font-weight: bold;
+    margin-bottom: .3125rem;
+}
+
+.card .description {
+    color: #71717a;
+}
+
+.card div:last-child {
+    align-self: end;
+    display: flex;
+    gap: 1.25rem;
+}
+
+.card .icon {
+    cursor: pointer;
+}
+
+main .more {
+    padding: 0 .9375rem;
+    display: grid;
+    align-content: start;
+    gap: 1.875rem;
+}
+
+.more .announcements .title,
+.more .trends .title {
+    margin-bottom: .625rem;
+}
+
+.more .announcements-contents,
+.more .trends-contents {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 2.4px 2.4px 3.2px rgba(0, 0, 0, .15);
+}
+
+.more .announcements-contents {
+    padding: .625rem 1.5625rem;
+}
+
+.announcements-contents p {
+    font-size: 75%;
+    color: #71717a;
+}
+
+.announcements-contents div {
+    padding: .9375rem 0;
+}
+
+.announcements-contents div + div {
+    border-top: 1px solid #e2e8f0;
+}
+
+.announcements-contents a {
+    display: inline-block;
+    font-size: 87.5%;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: .3125rem;
+}
+
+.more .trends-contents {
+    padding: 1.25rem;
+}
+
+.trends-contents > div {
+    display: flex;
+    align-items: center;
+    gap: .9375rem;
+}
+
+.trends-contents > div + div {
+    margin-top: 1.25rem;
+}
+
+.trends-contents {
+    font-size: 81.25%;
+}
+
+.trends-contents a {
+    color: #000;
+}
+
+.trends-contents p {
+    color: #71717a;
+    margin-top: .125rem;
 }
